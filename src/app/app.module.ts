@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { StoreModule } from '@ngrx/store';
 import { activeContentReducer } from './redux/active-content';
+import { VideoPageComponent } from './video-page/video-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationMenuComponent
+    NavigationMenuComponent,
+    VideoPageComponent
   ],
   imports: [
     BrowserModule,

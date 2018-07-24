@@ -1,7 +1,7 @@
 import { ActionReducer, Action } from '@ngrx/store';
 import { NavigateContentAction } from './actions';
 
-export const HOME = 'HOME';
+export const VIDEO = 'VIDEO';
 
 export interface PageState {
   activeContent: string;
@@ -12,6 +12,6 @@ export function activeContentReducer(state: string, action: NavigateContentActio
     case 'SELECTION':
       return action.selectedElement;
     default:
-      return HOME;
+      return VIDEO;
   }
 }

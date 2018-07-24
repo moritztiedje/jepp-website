@@ -1,0 +1,10 @@
+div {
+  background: url(video-page.png) no-repeat center center fixed;
+  width: 100%;
+  height: calc(100% - 72px);
+  display: flex;
+
+  iframe {
+    margin: auto;
+  }
+}

@@ -5,6 +5,9 @@ div {
   height: 100%;
 
   iframe {
+    border: solid 2px grey;
+    position: relative;
+    right: 17%;
     margin: auto;
   }
 }

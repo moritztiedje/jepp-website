@@ -2,9 +2,10 @@
   min-height: 100%;
   position: relative;
 
-  app-navigation-menu {
+  app-top-nav-bar {
     height: 100px;
     width: 100%;
+    display: block;
   }
 
   app-video-page {

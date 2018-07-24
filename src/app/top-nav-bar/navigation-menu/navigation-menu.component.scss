@@ -1,0 +1,19 @@
+:host {
+  > div {
+    display: flex;
+
+    > div {
+      padding-left: 10px;
+      padding-right: 10px;
+      color: blue;
+      font-family: 'Karla';
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

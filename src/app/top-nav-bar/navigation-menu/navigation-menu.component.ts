@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { NavigateContentAction } from '../redux/actions';
+import { NavigateContentAction } from '../../redux/actions';
 import { PageState, VIDEO } from 'src/app/redux/active-content';
 
 @Component({

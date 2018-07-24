@@ -1,0 +1,29 @@
+:host > div {
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: solid 4px black;
+  height: 100%;
+  box-sizing: border-box;
+
+  div.logo {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding-left: 35px;
+    height: 100%;
+
+    div.image {
+      width: 58px;
+      background: url(logo.png) no-repeat center center;
+      background-size: cover;
+      height: 90%
+    }
+
+    div.text {
+      font-family: Karla;
+      width: calc(100% - 58px);
+    }
+  }
+}

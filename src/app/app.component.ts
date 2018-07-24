@@ -8,13 +8,5 @@ import { PageState, VIDEO } from './redux/active-content';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  selection: string;
 
-  constructor(store: Store<PageState>) {
-    store.subscribe(pageState => this.selection = pageState.activeContent);
-  }
-
-  videoPageVisible() {
-    return this.selection == VIDEO;
-  }
 }

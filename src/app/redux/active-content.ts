@@ -2,6 +2,8 @@ import { ActionReducer, Action } from '@ngrx/store';
 import { NavigateContentAction } from './actions';
 
 export const VIDEO = 'VIDEO';
+export const DONATE_PAGE = 'DONATE PAGE';
+export const GALLERY = 'GALLERY';
 
 export interface PageState {
   activeContent: string;

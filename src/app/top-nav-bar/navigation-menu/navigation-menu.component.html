@@ -1,6 +1,6 @@
 <div>
   <div (click)="selectVideo()" [ngClass]="{'selected': videoIsSelected()}">Video</div>
   <div (click)="select()">About Us</div>
-  <div (click)="select()">Donate</div>
-  <div (click)="select()">Gallery</div>
+  <div (click)="selectDonate()" [ngClass]="{'selected': donateIsSelected()}">Donate</div>
+  <div (click)="selectGallery()" [ngClass]="{'selected': galleryIsSelected()}">Gallery</div>
 </div>

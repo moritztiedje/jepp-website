@@ -11,7 +11,11 @@ import { PageState, VIDEO } from 'src/app/redux/active-content';
 
 export class NavigationMenuComponent {
 
-  constructor(private store: Store<PageState>) { }
+  selection: string;
+
+  constructor(private store: Store<PageState>) {
+    store.subscribe(pageState => this.selection = pageState.activeContent);
+  }
 
   select() {
     this.store.dispatch(new NavigateContentAction('NOT IMPLEMENTED'));
@@ -19,6 +23,10 @@ export class NavigationMenuComponent {
 
   selectVideo() {
     this.store.dispatch(new NavigateContentAction(VIDEO))
+  }
+
+  videoIsSelected() {
+    return this.selection === VIDEO;
   }
 
 }

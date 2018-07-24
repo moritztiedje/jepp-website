@@ -1,8 +1,15 @@
 :host {
+  height: 100%;
+
   > div {
     display: flex;
+    height: 100%;
 
     > div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
       padding-left: 10px;
       padding-right: 10px;
       color: blue;
@@ -12,7 +19,10 @@
       cursor: pointer;
 
       &:hover {
-        color: red;
+        color: lightblue;
+      }
+      &.selected {
+        background-color: lightgray;
       }
     }
   }

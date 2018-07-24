@@ -1,5 +1,16 @@
-:host, html, body {
+:host {
   min-height: 100%;
   position: relative;
+
+  app-navigation-menu {
+    height: 100px;
+    width: 100%;
+  }
+
+  app-video-page {
+    height: calc(100% - 100px);
+    width: 100%;
+    display: block;
+  }
 }
 

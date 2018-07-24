@@ -3,16 +3,20 @@
   display: flex;
   justify-content: flex-end;
   border-bottom: solid 4px black;
-  padding: 20px;
-  text-align: left;
+  padding: 38px;
+  box-sizing: border-box;
 
   div {
-    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: blue;
+    font-family: 'Karla';
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
 
     &:hover {
       color: red;
     }
   }
-
 }

@@ -1,8 +1,8 @@
 div {
   background: url(video-page.png) no-repeat center center fixed;
-  width: 100%;
-  height: calc(100% - 72px);
+  background-size: cover;
   display: flex;
+  height: 100%;
 
   iframe {
     margin: auto;

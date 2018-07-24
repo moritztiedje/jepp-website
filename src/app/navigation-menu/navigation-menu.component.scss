@@ -1,0 +1,18 @@
+:host {
+  background-color: grey;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: solid 4px black;
+  padding: 20px;
+  text-align: left;
+
+  div {
+    padding: 5px;
+    color: blue;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+}

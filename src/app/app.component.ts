@@ -2,7 +2,6 @@ import { Component, ChangeDetectorRef, ChangeDetectionStrategy, ComponentRef, Ap
 import { Store } from '@ngrx/store';
 import { PageState } from './app.module';
 import { WindowResizedAction, WindowSizes } from './redux/window-size';
-import { read } from 'fs';
 
 @Component({
   selector: 'app-root',

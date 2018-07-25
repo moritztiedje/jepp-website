@@ -27,7 +27,7 @@
 :host.mobile {
   position: fixed;
   right: 0px;
-  border: solid black 4px;
+  box-shadow: -10px 10px 20px grey;
   background-color: white;
 
   > div {

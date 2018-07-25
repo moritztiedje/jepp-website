@@ -23,3 +23,25 @@
     background-color: lightgray;
   }
 }
+
+:host.mobile {
+  position: fixed;
+  right: 0px;
+  border: solid black 4px;
+  background-color: white;
+
+  > div {
+    color: blue;
+    font-family: 'Karla';
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &.selected {
+      color: lightblue;
+    }
+  }
+}

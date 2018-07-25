@@ -11,7 +11,7 @@ export class NavigationMenuMobileComponent {
 
   constructor() { }
 
-  clickHamburger() {
+  toggleMenu() {
     this.flyoutMenuOpen = !this.flyoutMenuOpen;
   }
 

@@ -1,6 +1,7 @@
-<div class="button" [ngClass]="{'clicked' : flyoutMenuOpen}" (click)="clickHamburger()">
+<div class="button" [ngClass]="{'clicked' : flyoutMenuOpen}" (click)="toggleMenu()">
   <div class="button-logo"></div>
 </div>
 <app-navigation-menu-content *ngIf="flyoutMenuOpen"
-                             class="mobile">
+                             class="mobile"
+                             (click)="toggleMenu()">
 </app-navigation-menu-content>

@@ -2,7 +2,8 @@ import { Action } from "@ngrx/store";
 
 export enum WindowSizes {
   Large,
-  Medium
+  Medium,
+  Mobile
 }
 
 export function windowSizeReducer(state: string, action: WindowResizedAction) {
@@ -17,8 +18,10 @@ export function windowSizeReducer(state: string, action: WindowResizedAction) {
 function determineWindowSize(action: WindowResizedAction) {
   if (action.windowWidth >= 1500)
     return WindowSizes.Large;
-  else
+  else if (action.windowWidth > 1024)
     return WindowSizes.Medium;
+  else
+    return WindowSizes.Mobile
 }
 
 export class WindowResizedAction implements Action {

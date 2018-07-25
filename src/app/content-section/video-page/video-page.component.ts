@@ -18,8 +18,10 @@ export class VideoPageComponent {
   videoSize() {
     if (this.windowSize === WindowSizes.Large)
       return 'large';
-    else
+    else if (this.windowSize === WindowSizes.Medium)
       return 'medium';
+    else
+      return 'fullscreen';
   }
 
 }

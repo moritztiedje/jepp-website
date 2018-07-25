@@ -1,7 +1,8 @@
 import { Component, ChangeDetectorRef, ChangeDetectionStrategy, ComponentRef, ApplicationRef, HostListener } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { PageState } from './app.module';
-import { WindowResizedAction } from './redux/window-size';
+import { WindowResizedAction, WindowSizes } from './redux/window-size';
+import { read } from 'fs';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,11 @@ import { WindowResizedAction } from './redux/window-size';
 })
 export class AppComponent {
   store: Store<PageState>;
+  windowSize: WindowSizes;
 
   constructor(store: Store<PageState>) {
     store.dispatch(new WindowResizedAction(window.innerWidth, window.innerHeight));
+    store.subscribe(pageState => this.windowSize = pageState.windowSize)
     this.store = store;
   }
 
@@ -20,4 +23,12 @@ export class AppComponent {
   onWindowResize(event?) {
     this.store.dispatch(new WindowResizedAction(window.innerWidth, window.innerHeight));
   }
+
+  getDisplayModeClass() {
+    if (this.windowSize === WindowSizes.Mobile)
+      return 'mobile';
+    else
+      return 'desktop';
+  }
+
 }

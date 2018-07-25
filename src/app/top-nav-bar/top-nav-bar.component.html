@@ -1,5 +1,6 @@
-<div>
-  <app-navigation-menu></app-navigation-menu>
+<div [ngClass]="isInDesktopMode() ? 'desktop' : 'mobile'">
+  <app-navigation-menu *ngIf="isInDesktopMode()"></app-navigation-menu>
+  <app-navigation-menu-mobile *ngIf="!isInDesktopMode()"></app-navigation-menu-mobile>
   <div class="logo">
     <div class="image"></div>
     <div class="text">Jhuwani Environment Protection Programme</div>

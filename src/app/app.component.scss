@@ -3,15 +3,28 @@
   position: relative;
 
   app-top-nav-bar {
-    height: 100px;
     width: 100%;
     display: block;
+  }
+
+  app-top-nav-bar.desktop {
+    height: 100px;
+  }
+
+  app-top-nav-bar.mobile {
+    height: 64px;
   }
 
   app-content-section {
-    height: calc(100% - 100px);
     width: 100%;
     display: block;
   }
-}
 
+  app-content-section.desktop {
+    height: calc(100% - 100px);
+  }
+
+  app-content-section.mobile {
+    height: calc(100% - 64px);
+  }
+}

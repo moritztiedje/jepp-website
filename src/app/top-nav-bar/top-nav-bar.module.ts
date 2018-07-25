@@ -2,12 +2,14 @@ import { NavigationMenuComponent } from "./navigation-menu/navigation-menu.compo
 import { TopNavBarComponent } from "./top-nav-bar.component";
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
+import { NavigationMenuMobileComponent } from './navigation-menu-mobile/navigation-menu-mobile.component';
 
 
 @NgModule({
   declarations: [
     NavigationMenuComponent,
-    TopNavBarComponent
+    TopNavBarComponent,
+    NavigationMenuMobileComponent
   ],
   imports: [
     CommonModule

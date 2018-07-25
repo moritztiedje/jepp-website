@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ContentPages } from '../redux/active-content';
+import { ContentPages, NavigateContentAction } from '../redux/active-content';
 import { PageState } from '../app.module';
 
 @Component({
@@ -14,6 +14,7 @@ export class ContentSectionComponent {
 
   constructor(store: Store<PageState>) {
     store.subscribe(pageState => this.selection = pageState.activeContent);
+    store.dispatch(new NavigateContentAction(ContentPages.video));
   }
 
   videoPageSelected() {

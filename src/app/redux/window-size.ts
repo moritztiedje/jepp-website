@@ -11,7 +11,7 @@ export function windowSizeReducer(state: string, action: WindowResizedAction) {
     case 'RESIZE':
       return determineWindowSize(action);
     default:
-      return WindowSizes.Large;
+      return state;
   }
 }
 

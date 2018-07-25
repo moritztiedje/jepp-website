@@ -15,7 +15,7 @@ export function activeContentReducer(state: string, action: NavigateContentActio
     case 'SELECTION':
       return action.selectedElement;
     default:
-      return ContentPages.video;
+      return state;
   }
 }
 

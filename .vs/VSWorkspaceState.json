@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\content-section",
+    "\\src\\app\\redux",
+    "\\src\\app\\top-nav-bar",
+    "\\src\\app\\top-nav-bar\\navigation-menu",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\top-nav-bar\\navigation-menu\\navigation-menu.component.scss",
+  "PreviewInSolutionExplorer": false
+}

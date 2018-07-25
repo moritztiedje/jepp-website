@@ -1,5 +1,4 @@
 import { ActionReducer, Action } from '@ngrx/store';
-import { NavigateContentAction } from './actions';
 
 export const VIDEO = 'VIDEO';
 export const PROBLEM = 'PROBLEM';
@@ -9,10 +8,6 @@ export const DONATE_PAGE = 'DONATE PAGE';
 export const GALLERY = 'GALLERY';
 export const CONTACT = 'CONTACT';
 
-export interface PageState {
-  activeContent: string;
-}
-
 export function activeContentReducer(state: string, action: NavigateContentAction) {
   switch (action.type) {
     case 'SELECTION':
@@ -20,4 +15,10 @@ export function activeContentReducer(state: string, action: NavigateContentActio
     default:
       return VIDEO;
   }
+}
+
+export class NavigateContentAction implements Action {
+  type: string = 'SELECTION';
+
+  constructor(public selectedElement: string) { }
 }

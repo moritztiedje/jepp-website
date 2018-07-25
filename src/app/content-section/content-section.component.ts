@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { PageState, VIDEO, DONATE_PAGE, GALLERY } from '../redux/active-content';
+import { VIDEO, DONATE_PAGE, GALLERY } from '../redux/active-content';
+import { PageState } from '../app.module';
 
 @Component({
   selector: 'app-content-section',

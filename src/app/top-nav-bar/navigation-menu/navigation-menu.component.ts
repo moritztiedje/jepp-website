@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { NavigateContentAction } from '../../redux/actions';
-import { PageState, VIDEO, DONATE_PAGE, GALLERY, PROBLEM, SOLUTION, PARTNERS, CONTACT } from 'src/app/redux/active-content';
+import { VIDEO, DONATE_PAGE, GALLERY, PROBLEM, SOLUTION, PARTNERS, CONTACT, NavigateContentAction } from 'src/app/redux/active-content';
+import { PageState } from '../../app.module';
 
 @Component({
   selector: 'app-navigation-menu',

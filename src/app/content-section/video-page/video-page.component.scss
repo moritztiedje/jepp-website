@@ -5,6 +5,16 @@ div {
   height: 100%;
 
   iframe {
+    &.large {
+      width: 900px;
+      height: 700px;
+    }
+
+    &.medium {
+      width: 630px;
+      height: 470px;
+    }
+
     border: solid 2px grey;
     position: relative;
     right: 17%;

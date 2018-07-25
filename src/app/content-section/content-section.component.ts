@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { VIDEO, DONATE_PAGE, GALLERY } from '../redux/active-content';
+import { ContentPages } from '../redux/active-content';
 import { PageState } from '../app.module';
 
 @Component({
@@ -10,22 +10,14 @@ import { PageState } from '../app.module';
 })
 export class ContentSectionComponent {
 
-  selection: string;
+  selection: ContentPages;
 
   constructor(store: Store<PageState>) {
     store.subscribe(pageState => this.selection = pageState.activeContent);
   }
 
   videoPageSelected() {
-    return this.selection == VIDEO;
-  }
-
-  donatePageSelected() {
-    return this.selection == DONATE_PAGE;
-  }
-
-  gallerySelected() {
-    return this.selection == GALLERY;
+    return this.selection == ContentPages.video;
   }
 
 }

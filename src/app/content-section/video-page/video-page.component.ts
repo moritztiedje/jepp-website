@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { PageState } from '../../app.module';
-import { LARGE_WINDOW } from '../../redux/window-size';
+import { WindowSizes } from '../../redux/window-size';
 
 @Component({
   selector: 'app-video-page',
@@ -9,14 +9,14 @@ import { LARGE_WINDOW } from '../../redux/window-size';
   styleUrls: ['./video-page.component.scss']
 })
 export class VideoPageComponent {
-  windowSize: string;
+  windowSize: WindowSizes;
 
   constructor(store: Store<PageState>) {
     store.subscribe(pageState => this.windowSize = pageState.windowSize);
   }
 
   videoSize() {
-    if (this.windowSize === LARGE_WINDOW)
+    if (this.windowSize === WindowSizes.Large)
       return 'large';
     else
       return 'medium';

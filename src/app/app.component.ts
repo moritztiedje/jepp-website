@@ -1,6 +1,5 @@
 import { Component, ChangeDetectorRef, ChangeDetectionStrategy, ComponentRef, ApplicationRef, HostListener } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { VIDEO } from './redux/active-content';
 import { PageState } from './app.module';
 import { WindowResizedAction } from './redux/window-size';
 

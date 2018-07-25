@@ -1,22 +1,24 @@
 import { Action } from "@ngrx/store";
 
-export const LARGE_WINDOW = 'LARGE_WINDOW';
-export const MEDIUM_WINDOW = 'MEDIUM_WINDOW';
+export enum WindowSizes {
+  Large,
+  Medium
+}
 
 export function windowSizeReducer(state: string, action: WindowResizedAction) {
   switch (action.type) {
     case 'RESIZE':
       return determineWindowSize(action);
     default:
-      return LARGE_WINDOW;
+      return WindowSizes.Large;
   }
 }
 
 function determineWindowSize(action: WindowResizedAction) {
   if (action.windowWidth >= 1500)
-    return LARGE_WINDOW;
+    return WindowSizes.Large;
   else
-    return MEDIUM_WINDOW;
+    return WindowSizes.Medium;
 }
 
 export class WindowResizedAction implements Action {

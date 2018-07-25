@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { VIDEO, DONATE_PAGE, GALLERY, PROBLEM, SOLUTION, PARTNERS, CONTACT, NavigateContentAction } from 'src/app/redux/active-content';
+import { ContentPages, NavigateContentAction } from 'src/app/redux/active-content';
 import { PageState } from '../../app.module';
 
 @Component({
@@ -11,70 +11,66 @@ import { PageState } from '../../app.module';
 
 export class NavigationMenuComponent {
 
-  selection: string;
+  selection: ContentPages;
 
   constructor(private store: Store<PageState>) {
     store.subscribe(pageState => this.selection = pageState.activeContent);
   }
 
-  select() {
-    this.store.dispatch(new NavigateContentAction('NOT IMPLEMENTED'));
-  }
-
   selectVideo() {
-    this.store.dispatch(new NavigateContentAction(VIDEO))
+    this.store.dispatch(new NavigateContentAction(ContentPages.video))
   }
 
   videoIsSelected() {
-    return this.selection === VIDEO;
+    return this.selection === ContentPages.video;
   }
 
   selectProblem() {
-    this.store.dispatch(new NavigateContentAction(PROBLEM))
+    this.store.dispatch(new NavigateContentAction(ContentPages.problem))
   }
 
   problemIsSelected() {
-    return this.selection === PROBLEM;
+    return this.selection === ContentPages.problem;
   }
 
   selectSolution() {
-    this.store.dispatch(new NavigateContentAction(SOLUTION))
+    this.store.dispatch(new NavigateContentAction(ContentPages.solution))
   }
 
   solutionIsSelected() {
-    return this.selection === SOLUTION;
+    return this.selection === ContentPages.solution;
   }
 
   selectPartners() {
-    this.store.dispatch(new NavigateContentAction(PARTNERS))
+    this.store.dispatch(new NavigateContentAction(ContentPages.partners))
   }
 
   partnersIsSelected() {
-    return this.selection === PARTNERS;
+    return this.selection === ContentPages.partners;
   }
 
   selectGallery() {
-    this.store.dispatch(new NavigateContentAction(GALLERY))
+    this.store.dispatch(new NavigateContentAction(ContentPages.gallery))
   }
 
   galleryIsSelected() {
-    return this.selection === GALLERY;
+    return this.selection === ContentPages.gallery;
   }
 
   selectDonate() {
-    this.store.dispatch(new NavigateContentAction(DONATE_PAGE))
+    this.store.dispatch(new NavigateContentAction(ContentPages.donate))
   }
 
   donateIsSelected() {
-    return this.selection === DONATE_PAGE;
+    return this.selection === ContentPages.donate;
   }
 
   selectContact() {
-    this.store.dispatch(new NavigateContentAction(CONTACT))
+    this.store.dispatch(new NavigateContentAction(ContentPages.contact))
   }
 
   contactIsSelected() {
-    return this.selection === CONTACT;
+    return this.selection === ContentPages.contact;
   }
 
 }

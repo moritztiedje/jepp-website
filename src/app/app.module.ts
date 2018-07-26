@@ -8,6 +8,7 @@ import { TopNavBarModule } from './top-nav-bar/top-nav-bar.module';
 import { ContentSectionComponent } from './content-section/content-section.component';
 import { ContentSectionModule } from './content-section/content-section.module';
 import { windowSizeReducer, WindowSizes } from './redux/window-size';
+import { disableContentReducer } from './redux/disabled-content';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,11 @@ import { windowSizeReducer, WindowSizes } from './redux/window-size';
     BrowserModule,
     TopNavBarModule,
     ContentSectionModule,
-    StoreModule.forRoot({ activeContent: activeContentReducer, windowSize: windowSizeReducer })
+    StoreModule.forRoot({
+      activeContent: activeContentReducer,
+      windowSize: windowSizeReducer,
+      enabledContent: disableContentReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -27,4 +32,5 @@ export class AppModule { }
 export interface PageState {
   activeContent: ContentPages;
   windowSize: WindowSizes;
+  enabledContent: boolean;
 }

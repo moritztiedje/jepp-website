@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ContentPages, NavigateContentAction } from '../redux/active-content';
 import { PageState } from '../app.module';
+import { EnableContentAction } from '../redux/disabled-content';
 
 @Component({
   selector: 'app-content-section',
@@ -11,10 +12,16 @@ import { PageState } from '../app.module';
 export class ContentSectionComponent {
 
   selection: ContentPages;
+  enabled: boolean;
 
   constructor(store: Store<PageState>) {
-    store.subscribe(pageState => this.selection = pageState.activeContent);
     store.dispatch(new NavigateContentAction(ContentPages.video));
+    store.dispatch(new EnableContentAction());
+
+    store.subscribe(pageState => {
+      this.selection = pageState.activeContent;
+      this.enabled = pageState.enabledContent;
+    });
   }
 
   videoPageSelected() {

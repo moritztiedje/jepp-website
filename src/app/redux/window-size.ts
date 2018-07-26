@@ -6,7 +6,7 @@ export enum WindowSizes {
   Mobile
 }
 
-export function windowSizeReducer(state: string, action: WindowResizedAction) {
+export function windowSizeReducer(state: WindowSizes, action: WindowResizedAction) {
   switch (action.type) {
     case 'RESIZE':
       return determineWindowSize(action);

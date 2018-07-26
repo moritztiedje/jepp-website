@@ -10,7 +10,7 @@ export enum ContentPages {
   contact
 }
 
-export function activeContentReducer(state: string, action: NavigateContentAction) {
+export function activeContentReducer(state: ContentPages, action: NavigateContentAction) {
   switch (action.type) {
     case 'SELECTION':
       return action.selectedElement;

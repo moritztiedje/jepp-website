@@ -1,7 +1,58 @@
 :host {
-  background-color: lightgray;
+  display: block;
+  background: lightgray;
 
-  p {
-    font-family: Roboto;
+  .image-text-box {
+    padding: 20px;
+
+    > div {
+      width: 100%;
+      padding-top: 28%; //workaround. padding in percent depends on width. This way we have a 50:28 aspect ratio in the containers below.
+      box-sizing: border-box;
+      position: relative;
+
+      div {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+
+        &:nth-child(2) {
+          left: 50%;
+        }
+      }
+
+      div.text {
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          font-family: Roboto;
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+
+      div.top-image, div.mid-image, div.low-image {
+        background: no-repeat center center;
+        background-size: auto 100%;
+      }
+
+      div.top-image {
+        background-image: url(img-top.png);
+      }
+
+      div.mid-image {
+        background-image: url(img-mid.png);
+      }
+
+      div.low-image {
+        background-image: url(img-low.png);
+      }
+    }
   }
 }

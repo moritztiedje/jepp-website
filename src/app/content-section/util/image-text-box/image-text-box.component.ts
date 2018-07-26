@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { WindowSizes } from '../../../redux/window-size';
+import { Store } from '@ngrx/store';
+import { PageState } from '../../../app.module';
 
 @Component({
   selector: 'app-image-text-box',
@@ -10,6 +13,16 @@ export class ImageTextBoxComponent {
   @Input() paragraphs: string[];
   @Input() imagefirst: boolean = false;
 
-  constructor() { }
+  windowSize: WindowSizes;
 
+  constructor(store: Store<PageState>) {
+    store.subscribe(pageState => this.windowSize = pageState.windowSize);
+  }
+
+  displayMode() {
+    if (this.windowSize === WindowSizes.Mobile)
+      return 'mobile';
+    else
+      return 'desktop';
+  }
 }

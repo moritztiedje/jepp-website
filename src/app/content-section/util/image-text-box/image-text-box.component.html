@@ -1,4 +1,4 @@
-<div [ngClass]="{'image-first': imagefirst}">
+<div [ngClass]="{'image-first': imagefirst}" class="{{displayMode()}}">
   <div class="text">
     <p *ngFor="let paragraph of paragraphs">
       {{paragraph}}

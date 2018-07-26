@@ -2,12 +2,31 @@
   display: block;
 
   > div {
+    div.text {
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: white;
+
+      p {
+        font-family: Roboto;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    div.image {
+      background: no-repeat;
+      background-size: auto 100%;
+    }
+  }
+
+  > div.desktop {
     width: 100%;
     padding-top: 28%; //workaround. padding in percent depends on width. This way we have a 50:28 aspect ratio in the containers below.
     box-sizing: border-box;
     position: relative;
 
-    &.image-first div{
+    &.image-first div {
       &.text {
         left: 50%;
       }
@@ -25,24 +44,17 @@
     }
 
     div.text {
-      padding: 10px;
-      box-sizing: border-box;
-      background-color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      p {
-        font-family: Roboto;
-        font-size: 18px;
-        text-align: center;
-      }
     }
 
     div.image {
       left: 50%;
-      background: no-repeat center center;
-      background-size: auto 100%;
     }
+  }
+
+  > div.mobile div.image {
+    padding-top: 56%; //workaround. padding in percent depends on width. This way we have a 100:56 aspect ratio in the containers below.
   }
 }

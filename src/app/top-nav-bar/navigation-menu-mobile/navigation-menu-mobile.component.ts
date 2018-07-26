@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-menu-mobile',
@@ -11,8 +11,14 @@ export class NavigationMenuMobileComponent {
 
   constructor() { }
 
-  toggleMenu() {
+  toggleMenu(event: Event) {
     this.flyoutMenuOpen = !this.flyoutMenuOpen;
+    event.stopPropagation();
+  }
+
+  @HostListener('document:click', ['$event'])
+  clickOutside(event) {
+    this.flyoutMenuOpen = false;
   }
 
 }

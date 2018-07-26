@@ -14,17 +14,23 @@
   padding-right: 15px;
   cursor: pointer;
 
-  &.highlighted {
-    > div {
+  &.highlighted > div {
       border-bottom: solid 6px black;
-    }
   }
 
   &:hover {
     color: lightblue;
 
+    &.highlighted > div {
+      border-color: lightblue;
+    }
+
     &.selected {
       color: black;
+
+      &.highlighted > div {
+        border-color: black;
+      }
     }
   }
 

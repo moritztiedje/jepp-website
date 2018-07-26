@@ -10,3 +10,10 @@ html, body {
   font-weight: 400;
   src: local('Karla'), local('Karla-Regular'), url(http://themes.googleusercontent.com/static/fonts/karla/v2/Vu9Dx8oyiuqEkuIyR3OPDQ.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}

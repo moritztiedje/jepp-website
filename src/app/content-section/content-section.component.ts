@@ -28,4 +28,12 @@ export class ContentSectionComponent {
     return this.selection == ContentPages.video;
   }
 
+  problemPageSelected() {
+    return this.selection == ContentPages.problem;
+  }
+
+  unimplementedPageSelected() {
+    return this.selection !== ContentPages.video && this.selection !== ContentPages.problem;
+  }
+
 }

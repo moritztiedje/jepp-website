@@ -1,3 +1,4 @@
 <app-video-page *ngIf="videoPageSelected()"></app-video-page>
-<app-under-construction *ngIf="!videoPageSelected()"></app-under-construction>
+<app-problem *ngIf="problemPageSelected()"></app-problem>
+<app-under-construction *ngIf="unimplementedPageSelected()"></app-under-construction>
 <div class="gray-overlay" *ngIf="!enabled"></div>

@@ -1,0 +1,8 @@
+<div [ngClass]="{'image-first': imagefirst}">
+  <div class="text">
+    <p *ngFor="let paragraph of paragraphs">
+      {{paragraph}}
+    </p>
+  </div>
+  <div class="image" [ngStyle]="{'background-image': image}"></div>
+</div>

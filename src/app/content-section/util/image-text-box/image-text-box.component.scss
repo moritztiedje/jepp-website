@@ -1,0 +1,48 @@
+:host {
+  display: block;
+
+  > div {
+    width: 100%;
+    padding-top: 28%; //workaround. padding in percent depends on width. This way we have a 50:28 aspect ratio in the containers below.
+    box-sizing: border-box;
+    position: relative;
+
+    &.image-first div{
+      &.text {
+        left: 50%;
+      }
+
+      &.image {
+        left: 0px;
+      }
+    }
+
+    div {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+    }
+
+    div.text {
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        font-family: Roboto;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    div.image {
+      left: 50%;
+      background: no-repeat center center;
+      background-size: auto 100%;
+    }
+  }
+}

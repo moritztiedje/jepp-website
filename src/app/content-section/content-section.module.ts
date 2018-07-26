@@ -4,13 +4,15 @@ import { ContentSectionComponent } from './content-section.component';
 import { VideoPageComponent } from './video-page/video-page.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { ProblemComponent } from './problem/problem.component';
+import { ImageTextBoxComponent } from './util/image-text-box/image-text-box.component';
 
 @NgModule({
   declarations: [
     ContentSectionComponent,
     VideoPageComponent,
     UnderConstructionComponent,
-    ProblemComponent
+    ProblemComponent,
+    ImageTextBoxComponent
   ],
   imports: [
     CommonModule

@@ -1,5 +1,6 @@
-<div [ngClass]="{'image-first': imagefirst}" class="{{displayMode()}}">
+<div [ngClass]="{'image-first': imagefirst}" class="{{getWindowSize()}}">
   <div class="text">
+    <h1>-{{title}}-</h1>
     <p *ngFor="let paragraph of paragraphs">
       {{paragraph}}
     </p>

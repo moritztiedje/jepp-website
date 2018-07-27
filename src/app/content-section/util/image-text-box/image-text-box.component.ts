@@ -9,6 +9,7 @@ import { PageState } from '../../../app.module';
   styleUrls: ['./image-text-box.component.scss']
 })
 export class ImageTextBoxComponent {
+  @Input() title: string;
   @Input() image: string;
   @Input() paragraphs: string[];
   @Input() imagefirst: boolean = false;
@@ -19,10 +20,12 @@ export class ImageTextBoxComponent {
     store.subscribe(pageState => this.windowSize = pageState.windowSize);
   }
 
-  displayMode() {
+  getWindowSize() {
     if (this.windowSize === WindowSizes.Mobile)
       return 'mobile';
+    else if (this.windowSize === WindowSizes.Medium)
+      return 'desktop-medium';
     else
-      return 'desktop';
+      return 'desktop-large';
   }
 }

@@ -13,6 +13,7 @@ export class ImageTextBoxComponent {
   @Input() image: string;
   @Input() paragraphs: string[];
   @Input() imagefirst: boolean = false;
+  @Input() imagewidth: string = 'wide-image';
 
   windowSize: WindowSizes;
 

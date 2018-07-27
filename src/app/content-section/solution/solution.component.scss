@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  background: lightgray;
+
+  app-image-text-box.desktop {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    &:first-child {
+      padding-top: 20px;
+    }
+  }
+}

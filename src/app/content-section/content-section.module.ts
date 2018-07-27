@@ -5,6 +5,7 @@ import { VideoPageComponent } from './video-page/video-page.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { ProblemComponent } from './problem/problem.component';
 import { ImageTextBoxComponent } from './util/image-text-box/image-text-box.component';
+import { SolutionComponent } from './solution/solution.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ImageTextBoxComponent } from './util/image-text-box/image-text-box.comp
     VideoPageComponent,
     UnderConstructionComponent,
     ProblemComponent,
-    ImageTextBoxComponent
+    ImageTextBoxComponent,
+    SolutionComponent
   ],
   imports: [
     CommonModule

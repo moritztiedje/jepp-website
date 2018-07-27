@@ -1,4 +1,4 @@
-<div [ngClass]="{'image-first': imagefirst}" class="{{getWindowSize()}}">
+<div [ngClass]="{'image-first': imagefirst}" class="{{getWindowSize()}} {{imagewidth}}">
   <div class="text">
     <h1>-{{title}}-</h1>
     <p *ngFor="let paragraph of paragraphs">

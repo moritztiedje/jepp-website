@@ -37,20 +37,50 @@
     box-sizing: border-box;
     position: relative;
 
-    &.image-first div {
-      &.text {
-        left: 50%;
+    &.wide-image {
+      &.image-first div {
+        &.text {
+          left: 50%;
+        }
+
+        &.image {
+          left: 0px;
+        }
       }
 
-      &.image {
-        left: 0px;
+      div {
+        width: 50%;
+      }
+
+      div.image {
+        left: 50%;
+      }
+    }
+
+    &.narrow-image {
+      &.image-first div {
+        &.text {
+          left: 33%;
+        }
+
+        &.image {
+          left: 0px;
+        }
+      }
+
+      div.text {
+        width: 67%;
+      }
+
+      div.image {
+        left: 33%;
+        width: 33%
       }
     }
 
     div {
       position: absolute;
       top: 0;
-      width: 50%;
       height: 100%;
     }
 
@@ -59,13 +89,15 @@
       flex-direction: column;
       justify-content: center;
     }
-
-    div.image {
-      left: 50%;
-    }
   }
 
-  > div.mobile div.image {
-    padding-top: 56%; //workaround. padding in percent depends on width. This way we have a 100:56 aspect ratio in the containers below.
+  > div.mobile {
+    &.wide-image div.image {
+      padding-top: 56%; //workaround. padding in percent depends on width. This way we have a 100:56 aspect ratio in the containers below.
+    }
+
+    &.narrow-image div.image {
+      padding-top: 75%; //workaround. padding in percent depends on width. This way we have a 100:56 aspect ratio in the containers below.
+    }
   }
 }

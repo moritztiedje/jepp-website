@@ -32,8 +32,12 @@ export class ContentSectionComponent {
     return this.selection == ContentPages.problem;
   }
 
+  solutionPageSelected() {
+    return this.selection == ContentPages.solution;
+  }
+
   unimplementedPageSelected() {
-    return this.selection !== ContentPages.video && this.selection !== ContentPages.problem;
+    return this.selection !== ContentPages.video && this.selection !== ContentPages.problem && this.selection !== ContentPages.solution;
   }
 
 }

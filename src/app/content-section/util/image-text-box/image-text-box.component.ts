@@ -9,9 +9,7 @@ import { PageState } from '../../../app.module';
   styleUrls: ['./image-text-box.component.scss']
 })
 export class ImageTextBoxComponent {
-  @Input() title: string;
   @Input() image: string;
-  @Input() paragraphs: string[];
   @Input() imagefirst: boolean = false;
   @Input() imagewidth: string = 'wide-image';
 

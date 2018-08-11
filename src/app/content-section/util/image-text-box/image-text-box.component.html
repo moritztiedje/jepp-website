@@ -1,9 +1,6 @@
 <div [ngClass]="{'image-first': imagefirst}" class="{{getWindowSize()}} {{imagewidth}}">
   <div class="text">
-    <h1>-{{title}}-</h1>
-    <p *ngFor="let paragraph of paragraphs">
-      {{paragraph}}
-    </p>
+    <ng-content></ng-content>
   </div>
   <div class="image" [ngStyle]="{'background-image': image}"></div>
 </div>

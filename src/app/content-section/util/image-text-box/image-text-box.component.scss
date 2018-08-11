@@ -7,7 +7,7 @@
       box-sizing: border-box;
       background-color: white;
 
-      p, h1 {
+      p, h1, a {
         font-family: Roboto;
         text-align: center;
       }
@@ -20,7 +20,7 @@
   }
 
   > div.desktop-large, div.mobile {
-    div.text p {
+    div.text p, a {
       font-size: 18px;
     }
   }
@@ -38,7 +38,7 @@
     position: relative;
 
     &.wide-image {
-      &.image-first div {
+      &.image-first > div {
         &.text {
           left: 50%;
         }
@@ -48,17 +48,17 @@
         }
       }
 
-      div {
+      > div {
         width: 50%;
       }
 
-      div.image {
+      > div.image {
         left: 50%;
       }
     }
 
     &.narrow-image {
-      &.image-first div {
+      &.image-first > div {
         &.text {
           left: 33%;
         }
@@ -78,13 +78,13 @@
       }
     }
 
-    div {
+    > div {
       position: absolute;
       top: 0;
       height: 100%;
     }
 
-    div.text {
+    > div.text {
       display: flex;
       flex-direction: column;
       justify-content: center;

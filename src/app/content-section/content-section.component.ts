@@ -36,8 +36,12 @@ export class ContentSectionComponent {
     return this.selection == ContentPages.solution;
   }
 
+  partnersPageSelected() {
+    return this.selection == ContentPages.partners;
+  }
+
   unimplementedPageSelected() {
-    return this.selection !== ContentPages.video && this.selection !== ContentPages.problem && this.selection !== ContentPages.solution;
+    return this.selection !== ContentPages.video && this.selection !== ContentPages.problem && this.selection !== ContentPages.solution && this.selection !== ContentPages.partners;
   }
 
 }

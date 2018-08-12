@@ -26,7 +26,8 @@
               "src/assets/problem-images/img-top.png",
               "src/assets/solution-images/img-low.png",
               "src/assets/solution-images/img-mid.png",
-              "src/assets/solution-images/img-top.png"
+              "src/assets/solution-images/img-top.png",
+              "src/assets/partners-images/background.png"
             ],
             "styles": [
               "src/styles.css"

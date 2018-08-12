@@ -6,6 +6,7 @@ import { UnderConstructionComponent } from './under-construction/under-construct
 import { ProblemComponent } from './problem/problem.component';
 import { ImageTextBoxComponent } from './util/image-text-box/image-text-box.component';
 import { SolutionComponent } from './solution/solution.component';
+import { PartnersComponent } from './partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SolutionComponent } from './solution/solution.component';
     UnderConstructionComponent,
     ProblemComponent,
     ImageTextBoxComponent,
-    SolutionComponent
+    SolutionComponent,
+    PartnersComponent
   ],
   imports: [
     CommonModule

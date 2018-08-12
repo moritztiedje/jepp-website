@@ -1,6 +1,60 @@
-div {
+div.background {
   background: url(/assets/partners-images/background.png);
   background-size: cover;
   display: flex;
+  flex-direction: column;
   height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+
+  &.desktop {
+    padding: 100px;
+  }
+
+  &.mobile {
+    padding: 20px;
+  }
+
+  a {
+    margin: 20px;
+
+    &:hover {
+      border: solid white 20px;
+      margin: 0px;
+    }
+  }
+
+  a.clean-city-logo {
+    background: url(/assets/partners-images/clean-city.png);
+    background-size: cover;
+    width: 281px;
+    height: 133px;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  a.rainbow-garden-logo {
+    background: url(/assets/partners-images/rainbow-garden.png);
+    background-size: cover;
+    width: 284px;
+    height: 111px;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  a.himalaya-climate-logo {
+    background: url(/assets/partners-images/himalaya-climate.png);
+    background-size: cover;
+    width: 230px;
+    height: 65px;
+
+    &:hover {
+      background-color: white;
+    }
+  }
 }

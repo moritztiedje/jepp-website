@@ -20,13 +20,16 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
+              "src/assets/**/*.png",
               "src/assets/problem-images/img-low.png",
               "src/assets/problem-images/img-mid.png",
               "src/assets/problem-images/img-top.png",
               "src/assets/solution-images/img-low.png",
               "src/assets/solution-images/img-mid.png",
               "src/assets/solution-images/img-top.png",
+              "src/assets/partners-images/himalaya-climate.png",
+              "src/assets/partners-images/clean-city.png",
+              "src/assets/partners-images/rainbow-garden.png",
               "src/assets/partners-images/background.png"
             ],
             "styles": [
